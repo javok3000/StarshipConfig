@@ -1,0 +1,165 @@
+format = """
+[░▒▓](#DC84F0)\
+$os\
+$username\
+$hostname\
+[](bg:#AF46C7 fg:#DC84F0)\
+$directory\
+[](fg:#AF46C7 bg:#842699)\
+$git_branch\
+$git_commit\
+$git_status\
+[](fg:#842699 bg:#6D1980)\
+$nodejs\
+$rust\
+$golang\
+$php\
+$python\
+[](fg:#6D1980 bg:#5B056E)\
+$time\
+$memory_usage\
+$battery\
+[ ](fg:#5B056E)\
+\n$character"""
+
+[username]
+style_user = "bg:#DC84F0 fg:#090c0c"
+format = '[$user @]($style)'
+disabled = false
+show_always = true
+
+[os]
+format = "[$symbol]($style)"
+style = "bg:#DC84F0 fg:#090c0c"
+disabled = false
+
+# This is the default symbols table.
+[os.symbols]
+Alpine = "🏔️ "
+Amazon = "🙂 "
+Android = "🤖 "
+Arch = "  "
+CentOS = "💠 "
+Debian = "🌀 "
+DragonFly = "🐉 "
+Emscripten = "🔗 "
+EndeavourOS = "🚀 "
+Fedora = "🎩 "
+FreeBSD = "😈 "
+Garuda = "🦅 "
+Gentoo = "🗜️ "
+HardenedBSD = "🛡️ "
+Illumos = "🐦 "
+Linux = "🐧 "
+Macos = "  "
+Manjaro = "🥭 "
+Mariner = "🌊 "
+MidnightBSD = "🌘 "
+Mint = "🌿 "
+NetBSD = "🚩 "
+NixOS = "❄️ "
+OpenBSD = "🐡 "
+openSUSE = "🦎 "
+OracleLinux = "🦴 "
+Pop = "🍭 "
+Raspbian = "🍓 "
+Redhat = "🎩 "
+RedHatEnterprise = "🎩 "
+Redox = "🧪 "
+Solus = "⛵ "
+SUSE = "🦎 "
+Ubuntu = "  "
+Unknown = "❓ "
+Windows = "🪟 "
+
+[hostname]
+ssh_only = false
+format = "[ $hostname ]($style)"
+style = "bg:#DC84F0 fg:#090c0c"
+disabled = false
+
+[env_var]
+variable = 'SHELL'
+
+[directory]
+style = "fg:#e3e5e5 bg:#AF46C7"
+format = "[ $path ]($style)"
+truncation_length = 0
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = " "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+symbol = ""
+style = "bg:#842699"
+format = '[[ $symbol $branch ](fg:#e3e5e5 bg:#842699)]($style)'
+
+[git_status]
+conflicted = "⚔️ "
+ahead = "🏎️ 💨 ×${count}"
+behind = "🐢 ×${count}"
+diverged = "🔱 🏎️ 💨 ×${ahead_count} 🐢 ×${behind_count}"
+untracked = "🛤️  ×${count}"
+stashed = "📦 "
+modified = "📝 ×${count}"
+staged = "🗃️  ×${count}"
+renamed = "📛 ×${count}"
+deleted = "🗑️  ×${count}"
+style = "bg:#842699"
+format = '[[($all_status$ahead_behind )](fg:#e3e5e5 bg:#842699)]($style)'
+
+[git_commit]
+style = "bg:#842699"
+commit_hash_length = 7
+format = "[[$hash](fg:#e3e5e5 bg:#842699)]($style)"
+disabled = false
+
+[nodejs]
+symbol = ""
+style = "bg:#6D1980"
+format = '[[ $symbol ($version) ](fg:#e3e5e5 bg:#6D1980)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:#6D1980"
+format = '[[ $symbol ($version) ](fg:#e3e5e5 bg:#6D1980)]($style)'
+
+[golang]
+symbol = "ﳑ"
+style = "bg:#6D1980"
+format = '[[ $symbol ($version) ](fg:#e3e5e5 bg:#6D1980)]($style)'
+
+[php]
+symbol = ""
+style = "bg:#6D1980"
+format = '[[ $symbol ($version) ](fg:#e3e5e5 bg:#6D1980)]($style)'
+
+[python]
+format = "[[ $symbol ($version) ](fg:#e3e5e5 bg:#6D1980)]($style) "
+style = "bg:#6D1980"
+disabled = false
+
+[battery]
+full_symbol = "🔋"
+charging_symbol = "🔌"
+discharging_symbol = "⚡"
+
+[[battery.display]]
+threshold = -1
+style = "bg:#5B056E"
+
+[memory_usage]
+disabled = false
+threshold = -1
+style = "bg:#5B056E"
+format = '[$symbol[${ram}](fg:#e3e5e5 bg:#5B056E)]($style)'
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:#5B056E"
+format = '[[  $time ](fg:#e3e5e5 bg:#5B056E)]($style)'
