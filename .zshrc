@@ -53,6 +53,7 @@ alias kg='kubectl get' #<pod;deployment;service;replicaset;nodes...>
 alias kc='kubectl create' #<deployment;service...>
 alias kd='kubectl delete' #<deployment;service...>
 alias kl='kubectl logs' #<ID pod;deployment...>
+alias kdp='kubectl decribe pod' #Describes a Pord, add pod name. #kdp <pod_name>
 alias ke='kubectl edit' #<deployment;service...>
 alias ka='kubectl apply -f' #<File_name.yaml>
 alias kdf='kd -f' #<File_name.yaml>
