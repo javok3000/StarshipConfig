@@ -50,13 +50,14 @@ alias drmia='drmi $(di)' #Delete every image.
 
 #Kubernetes
 alias kg='kubectl get' #<pod;deployment;service;replicaset;nodes...>
+alias kga='kubeclt get all' #Get everything in the cluster.
 alias kc='kubectl create' #<deployment;service...>
-alias kd='kubectl delete' #<deployment;service...>
+alias krm='kubectl delete' #<deployment;service...>
 alias kl='kubectl logs' #<ID pod;deployment...>
-alias kdp='kubectl decribe pod' #Describes a Pord, add pod name. #kdp <pod_name>
+alias kd='kubectl describe' #Describes <pod;service;deployment;replica;node>, add name. #kdp <name>
 alias ke='kubectl edit' #<deployment;service...>
 alias ka='kubectl apply -f' #<File_name.yaml>
-alias kdf='kd -f' #<File_name.yaml>
+alias krmf='kd -f' #<File_name.yaml>
 alias kdalld='kd --all deployments' #Delete all deployments BE CARFULL!!!
 
 
