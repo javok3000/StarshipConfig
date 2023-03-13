@@ -55,6 +55,7 @@ alias kd='kubectl delete' #<deployment;service...>
 alias kl='kubectl logs' #<ID pod;deployment...>
 alias ke='kubectl edit' #<deployment;service...>
 alias ka='kubectl apply -f' #<File_name.yaml>
+alias kdf='kd -f' #<File_name.yaml>
 alias kdalld='kd --all deployments' #Delete all deployments BE CARFULL!!!
 
 
