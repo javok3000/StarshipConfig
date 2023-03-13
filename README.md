@@ -1,5 +1,5 @@
 # Description
-A simple installation of starship for zsh in Ubuntu.
+A simple StarShip installation for zsh in Ubuntu.
 
 For more information read [Starship](https://starship.rs/) documentation
 
