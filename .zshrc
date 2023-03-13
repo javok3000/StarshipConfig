@@ -60,9 +60,6 @@ alias kdf='kd -f' #<File_name.yaml>
 alias kdalld='kd --all deployments' #Delete all deployments BE CARFULL!!!
 
 
-#Ruby
-source "/etc/profile.d/rvm.sh"
-
 #AWS Completer
 autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
@@ -72,12 +69,5 @@ complete -C '/usr/local/bin/aws_completer' aws
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/bin/terraform terraform
 
-#AWS
-export AWS_ACCESS_KEY_ID=AKIAX2FRWVHE5A56WL4B
-export AWS_SECRET_ACCESS_KEY=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
-
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
-
-#Var
-export ilitia=".ssh/ilitia_amazon.pem"
