@@ -41,7 +41,7 @@ starship.toml have purple/pink colors and starshop.toml.old have blue colors.
     cp ~/StarShipConfig/starship.toml ~/.confg
 ```
 
-## Rxtra
+## Extra
 
 If you want to use the blue colored one use starship.toml.old 
 
