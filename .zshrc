@@ -21,6 +21,7 @@ alias pull='git pull' #Pull remote repository. #pull <name_remote_repo> <branch_
 alias pullf='git pull --force' #Force Pull.
 alias gc='git commit' #Generate a commit. #gc -m <comment>
 alias gri='git rebase -i' #Change a previous commit.
+alias gca='git commit --all --amend' #Correct a commit
 alias ga='git add .' #Add untracked files.
 alias gch='git checkout' #Change branch.
 alias gcln='git clone' #Clone a remote repository.
