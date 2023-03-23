@@ -65,7 +65,7 @@ alias kd='kubectl describe' #Describes <pod;service;deployment;replica;node>, ad
 alias ke='kubectl edit' #<deployment;service...>
 alias ka='kubectl apply -f' #<File_name.yaml> #Use --namespace=<namespace_name>
 alias krmf='krm -f' #<File_name.yaml>
-alias kdalld='kd --all deployments' #Delete all deployments BE CARFULL!!!
+alias kdalld='krm --all deployments' #Delete all deployments BE CARFULL!!!
 alias kci='kubectl cluster-info'
 alias kcn='kubectl create namespace' #Create cluster namespace. Add name #kcn <namespace_name>
 alias klnf='kubectl api-resources --namespaced=false' #List every resource that isn't namespaceble
