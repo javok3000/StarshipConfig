@@ -44,7 +44,7 @@ alias dpull='docker pull' #Image pull from DockerHub #dpull <image_name>:<tag>
 alias dpush='docker push' # Push an image o Dockerhub
 alias dbu='docker build -t' # Build an image. Add name:tag and directory
 alias di='docker image ls' #List every downloaded image.
-alias dr='docker run -d' #Dry run a container, add the name of the image you want to use. #dr <image_name>:<tag>
+alias dr='docker run -d --name' #Dry run a container, add the name of the image you want to use. #dr <image_name>:<tag>
 alias drt='docker restart' #Restart container, add name or id of container. #drt <id or name>
 alias dst='docker start' #Start a stoped container, add name or id of container. #dst <id or name>
 alias dsp='docker stop' #Stop a running container, add name or id of container #dsp <id or name>
@@ -53,6 +53,7 @@ alias drm='docker rm' #Delete a container. #drm <id or name>
 alias drmi='docker image rm' #Delete a image. #drmi <image_name>:<tag>
 alias drma='drm $(dps -a)' #Delete every container.
 alias drmia='drmi $(di)' #Delete every image.
+alias drma='~/.rm.sh' #Delete a contaner and image. Add contanier and image name as arguments. #drma <cont_name> <img:tag>
 
 #Kubernetes
 alias kg='kubectl get' #<pod;deployment;service;replicaset;nodes...> #Use -n to get resources of other namespaces
@@ -96,6 +97,3 @@ complete -C '/usr/local/bin/aws_completer' aws
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
-
-#Var
-export ilitia="~/.ssh/ilitia_amazon.pem"
