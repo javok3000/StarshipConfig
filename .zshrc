@@ -54,6 +54,9 @@ alias drmi='docker image rm' #Delete a image. #drmi <image_name>:<tag>
 alias drma='drm $(dps -a)' #Delete every container.
 alias drmia='drmi $(di)' #Delete every image.
 alias drma='~/.rm.sh' #Delete a contaner and image. Add contanier and image name as arguments. #drma <cont_name> <img:tag>
+alias dl='docker logs'
+alias dcu='docker compose up -d' #Initialize a docker compose.
+alias dcd='docker compose down' #Terminate a docker compose.
 
 #Kubernetes
 alias kg='kubectl get' #<pod;deployment;service;replicaset;nodes...> #Use -n to get resources of other namespaces
@@ -71,8 +74,6 @@ alias kcn='kubectl create namespace' #Create cluster namespace. Add name #kcn <n
 alias klnf='kubectl api-resources --namespaced=false' #List every resource that isn't namespaceble
 alias klnt='kubectl api-resources --namespaced=true' #List every resource that is namespaceble
 
-source <(kubectl completion zsh)
-
 #Terraform
 alias tv='terraform validate' #Validate terraform syntaxis.
 alias tp='terraform plan' #Create a plan. Add -out=<plan_name> plan var. Add --destroy destruction plan
@@ -86,9 +87,6 @@ alias twl='terraform workspace list' #List all workspaces
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/bin/terraform terraform
-
-#Ruby
-source "/etc/profile.d/rvm.sh"
 
 #AWS Completer
 autoload bashcompinit && bashcompinit
