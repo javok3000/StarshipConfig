@@ -5,24 +5,26 @@ For more information read [Starship](https://starship.rs/) documentation
 
 ## Prerequiriments 
 
-1. Uninstall any other zsh them such as oh my zsh
+1. Install zsh if needed
 
-2. Install Starship:
+```bash
+    sudo apt install zsh
+```
+
+2. Uninstall any other zsh theme such as oh my zsh
+
+3. Install Starship:
 
 ```bash
     curl -sS https://starship.rs/install.sh | sh
 ```
 
-## Configure .zshrc 
-
-If you want to have mu configurations copy my .zshrc (the one in the repo) to you .zshrc 
+## Configure .zshrc  
 
 1. Adding StarShip initializer to .zshrc
 
-
 ```bash
     echo 'eval "$(starship init zsh)"' >> ~/.zshrc
-
 ```
 
 ## Adding a theme to starship
@@ -56,6 +58,8 @@ Then change starship.toml.old to starship.toml and copy starship.toml to .config
 ```bash
     mv starship.toml.old starship.toml && cp starship.toml ~/.config
 ```
+
+If you want some usefull aliases copy .zshrc content to your .zshrc
 
 ## Personalized colors
 
