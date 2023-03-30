@@ -12,6 +12,9 @@ alias RS="exec $SHELL" #Restart zsh.
 alias ..="cd .." #Previous directory.
 alias ~='cd ~' #Home.
 alias win='cd /mnt/c/Users/' #Windows folder.
+alias update='sudo apt update'
+alias upgrade='sudo apt upgrade -y'
+alias autoremove='sudo apt autoremove'
 
 #Git
 alias gi='git init' #Initialize git in current directory.
@@ -35,8 +38,17 @@ alias arbol="git log --all --graph --decorate --oneline" #Grafic log git
 
 #Python
 alias venv="python3 -m venv venv" #Create python's virtual enviroment
+alias pip3='python3 -m pip'
 alias activate="source venv/bin/activate" #Activate virtual enviroment
-alias pip3="python3 -m pip" #Short cut for pip module
+alias pyinstall='pyenv install -v' #Add python version #pyinstall <version> [3.11]
+#export py389='~/.pyenv/versions/3.8.9/bin/python'
+
+#export PYENV_ROOT="$HOME/.pyenv"
+#command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+#eval "$(pyenv init -)"
+#export LDFLAGS="-Wl,-rpath,$(brew --prefix openssl)/lib"
+#export CPPFLAGS="-I$(brew --prefix openssl)/include"
+#export CONFIGURE_OPTS="--with-openssl=$(brew --prefix openssl)"
 
 #Docker
 alias dps='docker ps' #Show runing containers, add -a to print EVERY container.
@@ -55,8 +67,11 @@ alias drma='drm $(dps -a)' #Delete every container.
 alias drmia='drmi $(di)' #Delete every image.
 alias drma='~/.rm.sh' #Delete a contaner and image. Add contanier and image name as arguments. #drma <cont_name> <img:tag>
 alias dl='docker logs'
+alias dvl='docker volume ls' #List every volume.
+alias dvrm='docker volume rm' #Delete a volume
 alias dcu='docker compose up -d' #Initialize a docker compose.
 alias dcd='docker compose down' #Terminate a docker compose.
+alias dcps='docker compose ps' #List container of a compose.
 
 #Kubernetes
 alias kg='kubectl get' #<pod;deployment;service;replicaset;nodes...> #Use -n to get resources of other namespaces
@@ -74,6 +89,8 @@ alias kcn='kubectl create namespace' #Create cluster namespace. Add name #kcn <n
 alias klnf='kubectl api-resources --namespaced=false' #List every resource that isn't namespaceble
 alias klnt='kubectl api-resources --namespaced=true' #List every resource that is namespaceble
 
+#source <(kubectl completion zsh)
+
 #Terraform
 alias tv='terraform validate' #Validate terraform syntaxis.
 alias tp='terraform plan' #Create a plan. Add -out=<plan_name> plan var. Add --destroy destruction plan
@@ -88,10 +105,18 @@ alias twl='terraform workspace list' #List all workspaces
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/bin/terraform terraform
 
+#Ruby
+source "/etc/profile.d/rvm.sh"
+
 #AWS Completer
 autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
 complete -C '/usr/local/bin/aws_completer' aws
 
+#Brew
+#alias brew='env PATH="${PATH//$(pyenv root)\/shims:/}" brew'
+
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
+#export ilitia='~/.ssh/devilitia.pem'
