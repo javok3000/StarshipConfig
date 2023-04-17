@@ -15,6 +15,7 @@ alias win='cd /mnt/c/Users/' #Windows folder.
 alias update='sudo apt update'
 alias upgrade='sudo apt upgrade -y'
 alias autoremove='sudo apt autoremove'
+alias installs='sudo apt install'
 
 #Git
 alias gi='git init' #Initialize git in current directory.
@@ -40,9 +41,8 @@ alias arbol="git log --all --graph --decorate --oneline" #Grafic log git
 #Python
 alias venv="python3 -m venv venv" #Create python's virtual enviroment
 alias pip3='python3 -m pip'
-alias activate="source venv/bin/activate" #Activate virtual enviroment
+#alias activate="source venv/bin/activate" #Activate virtual enviroment
 #alias pyinstall='pyenv install -v' #Add python version #pyinstall <version> [3.11]
-#export py389='~/.pyenv/versions/3.8.9/bin/python'
 
 #export PYENV_ROOT="$HOME/.pyenv"
 #command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
@@ -52,6 +52,7 @@ alias activate="source venv/bin/activate" #Activate virtual enviroment
 #export CONFIGURE_OPTS="--with-openssl=$(brew --prefix openssl)"
 
 #Docker
+alias docker build='docker buildx'
 alias dps='docker ps' #Show runing containers, add -a to print EVERY container.
 alias dpull='docker pull' #Image pull from DockerHub #dpull <image_name>:<tag>
 alias dpush='docker push' # Push an image o Dockerhub
@@ -71,6 +72,7 @@ alias dl='docker logs'
 alias dvl='docker volume ls' #List every volume.
 alias dvrm='docker volume rm' #Delete a volume
 alias dcu='docker compose up -d' #Initialize a docker compose.
+alias dcf='docker compose -f'
 alias dcd='docker compose down' #Terminate a docker compose.
 alias dcps='docker compose ps' #List container of a compose.
 alias dsd='docker stack deploy -c' #Add .yml file and a stack name
@@ -94,9 +96,10 @@ alias kcn='kubectl create namespace' #Create cluster namespace. Add name #kcn <n
 alias klnf='kubectl api-resources --namespaced=false' #List every resource that isn't namespaceble
 alias klnt='kubectl api-resources --namespaced=true' #List every resource that is namespaceble
 
-#source <(kubectl completion zsh)
+source <(kubectl completion zsh)
 
 #Terraform
+alias tf='terraform'
 alias tv='terraform validate' #Validate terraform syntaxis.
 alias tp='terraform plan' #Create a plan. Add -out=<plan_name> plan var. Add --destroy destruction plan
 alias ta='terraform apply' #Applies a terraform configuration. Add <plan_name> to use the created plan.
@@ -124,4 +127,4 @@ complete -C '/usr/local/bin/aws_completer' aws
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
-export ilitia='~/.ssh/devilitia.pem'
+#export ilitia='~/.ssh/devilitia.pem'
