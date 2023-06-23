@@ -41,8 +41,8 @@ alias arbol="git log --all --graph --decorate --oneline" #Grafic log git
 #Python
 alias venv="python3 -m venv venv" #Create python's virtual enviroment
 alias pip3='python3 -m pip'
-#alias activate="source venv/bin/activate" #Activate virtual enviroment
-#alias pyinstall='pyenv install -v' #Add python version #pyinstall <version> [3.11]
+alias activate="source venv/bin/activate" #Activate virtual enviroment
+alias pyinstall='pyenv install -v' #Add python version #pyinstall <version> [3.11]
 
 #export PYENV_ROOT="$HOME/.pyenv"
 #command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
@@ -89,14 +89,16 @@ alias kl='kubectl logs' #<ID pod;deployment...>
 alias kd='kubectl describe' #Describes <pod;service;deployment;replica;node>, add name. #kdp <name>
 alias ke='kubectl edit' #<deployment;service...>
 alias ka='kubectl apply -f' #<File_name.yaml> #Use --namespace=<namespace_name>
+alias kenv='~/ilitia/kube/deployK8sEnvVariables.sh'
 alias krmf='krm -f' #<File_name.yaml>
 alias kdalld='krm --all deployments' #Delete all deployments BE CARFULL!!!
 alias kci='kubectl cluster-info'
 alias kcn='kubectl create namespace' #Create cluster namespace. Add name #kcn <namespace_name>
 alias klnf='kubectl api-resources --namespaced=false' #List every resource that isn't namespaceble
 alias klnt='kubectl api-resources --namespaced=true' #List every resource that is namespaceble
+alias kcs='kubectl create secret generic' #Add name and --from-env-file=<env file name>
 
-source <(kubectl completion zsh)
+#source <(kubectl completion zsh)
 
 #Terraform
 alias tf='terraform'
@@ -110,8 +112,8 @@ alias twd='terraform workspace delete' #Delete a terraform workspace. Add worksp
 alias tws='terraform workspace select' #Change current workspace. Add workspace name #tws <name>.
 alias twl='terraform workspace list' #List all workspaces
 
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/bin/terraform terraform
+#autoload -U +X bashcompinit && bashcompinit
+#complete -o nospace -C /usr/bin/terraform terraform
 
 #Ruby
 #source "/etc/profile.d/rvm.sh"
@@ -121,10 +123,16 @@ autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
 complete -C '/usr/local/bin/aws_completer' aws
 
+#Azure
+source /etc/bash_completion.d/azure-cli
+
 #Brew
 #alias brew='env PATH="${PATH//$(pyenv root)\/shims:/}" brew'
 
 # Generated for envman. Do not edit.
-[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+#[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
-#export ilitia='~/.ssh/devilitia.pem'
+#export ilitian='~/.ssh/devilitia.pem'
+#export ilitiao='~/.ssh/ilitia_amazon.pem'
+#export ecr='1111111111.dkr.ecr.eu-west-1.amazonaws.com'
+#export dockerhub=''
