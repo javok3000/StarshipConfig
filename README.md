@@ -11,6 +11,12 @@ For more information read [Starship](https://starship.rs/) documentation
     sudo apt install zsh
 ```
 
+* Set zsh as default shell
+
+```bash
+    chsh -s $(which zsh)
+```
+
 2. Uninstall any other zsh theme such as oh my zsh
 
 3. Install Starship:
@@ -40,7 +46,7 @@ starship.toml have purple/pink colors and starshop.toml.old have blue colors.
 2. Copy starship.toml to .config
 
 ```bash
-    cp ~/StarShipConfig/starship.toml ~/.confg
+    cp ~/StarShipConfig/starship.toml ~/.config
 ```
 
 ## Extra
