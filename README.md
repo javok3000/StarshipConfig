@@ -24,6 +24,9 @@ For more information read [Starship](https://starship.rs/) documentation
 ```bash
     curl -sS https://starship.rs/install.sh | sh
 ```
+4. Install a [Nerd Font](https://www.nerdfonts.com/font-downloads)
+
+    I use FiraCode
 
 ## Configure .zshrc  
 
