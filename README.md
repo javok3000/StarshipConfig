@@ -35,6 +35,11 @@ For more information read [Starship](https://starship.rs/) documentation
 ```bash
     echo 'eval "$(starship init zsh)"' >> ~/.zshrc
 ```
+If you want some usefull aliases copy .zshrc content to your .zshrc
+
+```bash
+    mv .zshrc ~/.zshrc
+```
 
 ## Adding a theme to starship
 
@@ -67,8 +72,6 @@ Then change starship.toml.old to starship.toml and copy starship.toml to .config
 ```bash
     mv starship.toml.old starship.toml && cp starship.toml ~/.config
 ```
-
-If you want some usefull aliases copy .zshrc content to your .zshrc
 
 ## Personalized colors
 
